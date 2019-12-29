@@ -168,7 +168,7 @@ function imprimirCampeon(p){
 
             let imgClass = document.createElement('img');
             let numImg = buscarIndex(filterElementOptions, campeon[p].elemento[i]);
-            imgClass.src = '../img/tab_champions/element/' + numImg + '.png';
+            imgClass.src = 'img/tab_champions/element/' + numImg + '.png';
 
             classContainer.appendChild(classBox);
             classBox.appendChild(imgClass);
@@ -187,7 +187,7 @@ function imprimirCampeon(p){
 
             let imgClass = document.createElement('img');            
             let numImg = buscarIndex(filterClassOptions, campeon[p].clase[i]);
-            imgClass.src = '../img/tab_champions/class/' + numImg + '.png';
+            imgClass.src = 'img/tab_champions/class/' + numImg + '.png';
         
             classContainer.appendChild(classBox);
             classBox.appendChild(imgClass);

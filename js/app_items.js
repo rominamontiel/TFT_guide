@@ -3,10 +3,10 @@ var itemsPadre = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
 for (let i = 0; i < itemsPadre.length; i++) {
     let contPadre = document.getElementById('items-padre-container').children;
-    contPadre[i].style.background = 'url("../img/tab_objects/itemPadre/' + i + '.png")';
+    contPadre[i].style.background = 'url("img/tab_objects/itemPadre/' + i + '.png")';
 
     let listaDinam = document.getElementById('lista-dinamica').children;
-    listaDinam[i].style.background = 'url("../img/tab_objects/itemPadre/' + i + '.png")';
+    listaDinam[i].style.background = 'url("img/tab_objects/itemPadre/' + i + '.png")';
 }
 
 
@@ -72,7 +72,7 @@ function encuentraResultante(itemPadre) {
             visualTxt[nro].innerHTML = itemsResultDesc[i];
             
             let visualImg = document.getElementById('items-result-container').children;
-            visualImg[nro].style.background = 'url("../img/tab_objects/itemResult/' + i + '.png") no-repeat';
+            visualImg[nro].style.background = 'url("img/tab_objects/itemResult/' + i + '.png") no-repeat';
             
             nro++;           
         }
@@ -92,7 +92,7 @@ function encuentraResultante(itemPadre) {
         }
 
         let listaFija = document.getElementById('lista-fija').children;
-        listaFija[i].style.background = 'url("../img/tab_objects/itemPadre/' + itemPadre + '.png")';
+        listaFija[i].style.background = 'url("img/tab_objects/itemPadre/' + itemPadre + '.png")';
     }    
      
 }
