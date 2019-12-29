@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico">
+    <title>TFT Guía</title>
+</head>
+<body>
+    <div class="banner-container">
+        <div class="content-top">
+            <div class="left-box">
+                <img src="img/logo_TFT_small.png" alt="" class="small-logo">
+                <ul class="tabs">
+                    <li id="champion-tab" class="tab-active">
+                        <span>Campeones</span>
+                        <img src="img/arrow_down.svg" alt="">
+                    </li>
+                    <li id="object-tab" >
+                        <span>Objetos</span>
+                        <img src="img/arrow_down.svg" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="right-box">
+                <img src="img/email.svg" alt="">
+            </div>
+        </div>
+        <img src="img/banner_nami.png" alt="" class="banner-img">
+        <img src="img/logo_TFT.png" alt="" class="logo-tft">
+    </div>
+    <div class="container-gral">
+        <div class="champions-container" id="champions-container">
+            <div class="filters">
+                <div class="filter-box">
+                    <span>Elemento</span>
+                    <div class="select-custom">
+                        <select name="" id="filter-element" onchange="filtrar()">
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-box">
+                    <span>Clase</span>
+                    <div class="select-custom">
+                        <select name="" id="filter-class" onchange="filtrar()">
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-box">
+                    <span>Costo</span>
+                    <div class="select-custom">
+                        <select name="" id="filter-cost" onchange="filtrar()">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="filtered-champions" id="filtered-champions">
+                <!-- <div class="card">
+                    <div class="champion-data">
+                        <h2>VAYNE</h2>
+                        <div class="class-container">
+                            <div class="class-box">
+                                <img src="img/tab_champions/class/warden.png" alt="">
+                                <span>Ranger</span>
+                            </div>
+                            <div class="class-box">
+                                <img src="img/tab_champions/element/light.png" alt="">
+                                <span>Light</span>
+                            </div>
+                        </div>
+                        <div class="cost">
+                            <img src="img/tab_champions/coin.png" alt="">
+                            <span>1</span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="objects-container hide" id="objects-container">
+            <section>
+                <div class="items-padre-container" id="items-padre-container">
+                    <button onclick="encuentraResultante(0)">
+                        <div class="hover-item">
+                            <span class="name">Espadón</span>
+                            <span class="desc">+15 de daño de ataque</span>
+                        </div>
+                    </button>
+                    <button onclick="encuentraResultante(1)">
+                        <div class="hover-item">
+                            <span class="name">Arco Curvo</span>
+                            <span class="desc">+15% de velocidad de ataque</span>
+                        </div>
+                    </button>
+                    <button onclick="encuentraResultante(2)">
+                        <div class="hover-item">
+                            <span class="name">Vara AP</span>
+                            <span class="desc">+20% de poder de hechizo</span>
+                        </div>
+                    </button>
+                    <button onclick="encuentraResultante(3)">
+                        <div class="hover-item">
+                            <span class="name">Lágrima</span>
+                            <span class="desc">+20 de mana</span>
+                        </div>
+                    </button>
+                    <button onclick="encuentraResultante(4)">
+                        <div class="hover-item">
+                            <span class="name">Armadura</span>
+                            <span class="desc">+25 de armadura</span>
+                        </div>
+                    </button>
+                    <button onclick="encuentraResultante(5)">
+                        <div class="hover-item">
+                            <span class="name">Resist. Mágica</span>
+                            <span class="desc">+25 de resistencia mágica</span>
+                        </div>
+                    </button>
+                    <button onclick="encuentraResultante(6)">
+                        <div class="hover-item">
+                            <span class="name">Vida</span>
+                            <span class="desc">+200 de vida</span>
+                        </div>
+                    </button>
+                    <button onclick="encuentraResultante(7)">
+                        <div class="hover-item">
+                            <span class="name">Crítico</span>
+                            <span class="desc">+10% prob. golpe critico <br> +10% prob. evasion</span>
+                        </div>
+                    </button>
+                    <button onclick="encuentraResultante(8)">
+                        <div class="hover-item">
+                            <span class="name">Espátula</span>
+                            <span class="desc">Para combinarse!</span>
+                        </div>
+                    </button>
+                </div>
+                <div class="box-result">
+
+                    <div class="lista-fija" id="lista-fija">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <div class="lista-dinamica" id="lista-dinamica">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <div class="items-result-container" id="items-result-container">
+                        <div class="result"></div>
+                        <div class="result"></div>
+                        <div class="result"></div>
+                        <div class="result"></div>
+                        <div class="result"></div>
+                        <div class="result"></div>
+                        <div class="result"></div>
+                        <div class="result"></div>
+                        <div class="result"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="developer">
+            <span>Website developed by Montiel Romina - 2019</span>
+        </div>
+    </div>
+
+    <script src="js/tabs.js"></script>
+    <script src="js/cargar_selects.js"></script>
+    <script src="js/app_items.js"></script>
+    <script src="js/app_champions.js"></script>
+    <script src="js/objectChamp.js"></script>
+</body>
+</html>
