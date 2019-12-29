@@ -126,7 +126,7 @@ function filtroTriple(el,cl,co){
 function imprimirCampeon(p){
     let card = document.createElement('div');
     card.classList.add('card');
-    card.style.background = 'url("../img/tab_champions/champions/' + campeon[p].img + '")';
+    card.style.background = 'url(../img/tab_champions/champions/' + campeon[p].img + ')';
 
     let championData = document.createElement('div');
     championData.classList.add('champion-data');
