@@ -26,7 +26,9 @@ body {
   overflow-x: hidden; }
   body .banner-container {
     position: relative;
-    width: 100%; }
+    width: 100%;
+    overflow: hidden;
+    height: 45.83vw; }
     body .banner-container .content-top {
       position: absolute;
       top: 1rem;
@@ -74,7 +76,7 @@ body {
               transition: all .3s ease-in-out; }
             body .banner-container .content-top .left-box .tabs li:hover::before {
               width: 103%; }
-          body .banner-container .content-top .left-box .tabs .tab-active::before {
+          body .banner-container .content-top .left-box .tabs li.tab-active::before {
             width: 103%; }
       body .banner-container .content-top .right-box img {
         width: 2rem;
@@ -83,6 +85,15 @@ body {
         transition: all .3s ease-in-out; }
         body .banner-container .content-top .right-box img:hover {
           animation: agitar .5s; }
+    body .banner-container .content-top-scroll {
+      top: 0;
+      padding: 0 10vw;
+      position: fixed;
+      z-index: 2;
+      background: rgba(0, 0, 0, 0.6);
+      transition: all .3s ease-in-out; }
+      body .banner-container .content-top-scroll .left-box .small-logo {
+        height: 60%; }
     body .banner-container .banner-img {
       z-index: -1;
       width: 100%; }
@@ -92,6 +103,30 @@ body {
       left: 5%;
       transform: translateY(-50%);
       z-index: 1; }
+  body .banner-scroll {
+    position: fixed;
+    z-index: 2;
+    height: 5rem;
+    transition: all .4s ease-in-out; }
+    body .banner-scroll * {
+      transition: all .4s ease-in-out; }
+    body .banner-scroll .content-top {
+      top: 0;
+      padding: 0 10vw 0 10vw;
+      position: fixed;
+      z-index: 2;
+      background: rgba(0, 0, 0, 0.6);
+      transition: all .3s ease-in-out; }
+      body .banner-scroll .content-top .left-box .small-logo {
+        height: 60%; }
+    body .banner-scroll .banner-img {
+      height: 100%;
+      object-fit: cover; }
+    body .banner-scroll .logo-tft {
+      opacity: 0; }
+  body .banner-scroll2 {
+    height: 45.83vw;
+    position: initial; }
   body .container-gral {
     display: flex;
     align-items: center;
@@ -99,7 +134,8 @@ body {
     width: 80vw;
     margin: 0 auto;
     padding: 3rem 0 6rem 0;
-    position: relative; }
+    position: relative;
+    transition: all .4s ease-in-out; }
     body .container-gral .champions-container {
       width: 100%; }
       body .container-gral .champions-container .filters {
@@ -115,7 +151,8 @@ body {
           body .container-gral .champions-container .filters .filter-box span {
             font-size: .9rem;
             display: block;
-            margin-bottom: .5rem; }
+            margin-bottom: .5rem;
+            padding-left: .5rem; }
           body .container-gral .champions-container .filters .filter-box .select-custom {
             height: 4rem;
             background: rgba(255, 255, 255, 0.1);
@@ -162,6 +199,7 @@ body {
         body .container-gral .champions-container .filtered-champions .card {
           background: url("../img/tab_champions/vayne.jpg") no-repeat;
           background-size: cover !important;
+          background-position-x: center !important;
           width: 250px;
           height: 357px;
           box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
@@ -170,26 +208,26 @@ body {
           margin: 1rem;
           position: relative;
           cursor: pointer;
-          transition: all .5s ease-in-out;
+          transition: all .4s ease-in-out;
           overflow: hidden; }
           body .container-gral .champions-container .filtered-champions .card * {
             font-family: 'Quicksand', sans-serif;
             font-weight: 300; }
           body .container-gral .champions-container .filtered-champions .card:hover {
-            transform: translateY(-10px); }
+            transform: scale(1.03); }
             body .container-gral .champions-container .filtered-champions .card:hover::before {
-              top: -80%;
-              left: 100%; }
+              animation: reflejo .7s; }
+            body .container-gral .champions-container .filtered-champions .card:hover .champion-data h2 {
+              letter-spacing: 6px; }
           body .container-gral .champions-container .filtered-champions .card::before {
             content: '';
-            width: 7rem;
+            width: 12rem;
             height: 150%;
             transform: rotate(-45deg);
             position: absolute;
-            background: rgba(255, 255, 255, 0.05);
-            top: 35%;
-            left: -40%;
-            transition: all .4s ease-in-out; }
+            background: rgba(255, 255, 255, 0.1);
+            top: 50%;
+            left: -60%; }
           body .container-gral .champions-container .filtered-champions .card .champion-data {
             width: 100%;
             height: 35%;
@@ -202,7 +240,8 @@ body {
               margin: 0 auto;
               width: max-content;
               height: 2rem;
-              text-transform: uppercase; }
+              text-transform: uppercase;
+              transition: all .4s ease-in-out; }
               body .container-gral .champions-container .filtered-champions .card .champion-data h2::after, body .container-gral .champions-container .filtered-champions .card .champion-data h2::before {
                 content: '';
                 position: absolute;
@@ -373,6 +412,8 @@ body {
         font-family: 'Quicksand', sans-serif;
         font-weight: 300;
         font-size: 0.7rem; }
+  body .container-gral-scroll {
+    padding-top: 8rem; }
 
 @keyframes agitar {
   0% {
@@ -394,5 +435,164 @@ body {
   100% {
     opacity: 1;
     margin-top: 0; } }
+@keyframes reflejo {
+  100% {
+    top: -80%;
+    left: 100%;
+    opacity: 0; } }
+@media (max-width: 1500px) {
+  body .banner-container .content-top .left-box .tabs li span {
+    font-size: 1.1rem; }
+  body .banner-container .logo-tft {
+    width: 35vw; }
+  body .container-gral .objects-container section {
+    width: 80vw;
+    padding-top: 1rem;
+    overflow: overlay; }
+    body .container-gral .objects-container section .items-padre-container button .hover-item {
+      bottom: -120%;
+      top: initial; }
+    body .container-gral .objects-container section .items-padre-container button .hover-item::before {
+      bottom: initial;
+      top: -1px;
+      border-color: #586ba2 transparent transparent #586ba2; } }
+@media (max-width: 1300px) {
+  body .banner-container .content-top {
+    top: .5rem;
+    height: 4rem; }
+    body .banner-container .content-top .left-box .small-logo {
+      height: 65%; }
+    body .banner-container .content-top .left-box .tabs li span {
+      font-size: 1rem; }
+  body .banner-container .content-top-scroll {
+    top: 0; }
+  body .container-gral .champions-container .filtered-champions .card {
+    width: 200px;
+    height: 300px; }
+    body .container-gral .champions-container .filtered-champions .card .champion-data {
+      height: 40%; }
+      body .container-gral .champions-container .filtered-champions .card .champion-data h2 {
+        font-size: 1.3rem; }
+        body .container-gral .champions-container .filtered-champions .card .champion-data h2::before, body .container-gral .champions-container .filtered-champions .card .champion-data h2::after {
+          width: calc(100px - 75%); }
+      body .container-gral .champions-container .filtered-champions .card .champion-data .class-container .class-box span {
+        font-size: 0.9rem; }
+      body .container-gral .champions-container .filtered-champions .card .champion-data .class-container .class-box img {
+        height: 1rem; }
+    body .container-gral .champions-container .filtered-champions .card::before {
+      top: 40%;
+      left: -45%; } }
+@media (max-width: 699px) {
+  body .banner-container .content-top {
+    position: fixed;
+    top: 0;
+    padding: 0 1rem;
+    height: 3rem; }
+    body .banner-container .content-top .left-box {
+      width: 100%;
+      justify-content: center;
+      align-items: baseline;
+      padding-top: 0.6rem; }
+      body .banner-container .content-top .left-box .small-logo {
+        display: none; }
+      body .banner-container .content-top .left-box .tabs {
+        padding-left: 0;
+        margin: 0; }
+        body .banner-container .content-top .left-box .tabs li span {
+          font-size: .9rem; }
+        body .banner-container .content-top .left-box .tabs li::before {
+          height: 2rem;
+          width: 120%;
+          z-index: -1;
+          left: 50%;
+          transform: translateX(-50%);
+          background: rgba(31, 167, 197, 0.7);
+          opacity: 0; }
+        body .banner-container .content-top .left-box .tabs li img {
+          display: none; }
+        body .banner-container .content-top .left-box .tabs li.tab-active::before {
+          opacity: 1;
+          width: 120%; }
+    body .banner-container .content-top .right-box {
+      display: none; }
+  body .banner-container .content-top-scroll {
+    padding: 0 1rem;
+    height: 3rem; }
+  body .banner-container .logo-tft {
+    left: 12vw; }
+  body .container-gral {
+    width: 95vw;
+    padding: 1rem 0 6rem 0; }
+    body .container-gral .champions-container .filters {
+      flex-wrap: wrap;
+      padding-bottom: 1rem; }
+      body .container-gral .champions-container .filters .filter-box {
+        width: 100%;
+        margin-bottom: 1rem; }
+        body .container-gral .champions-container .filters .filter-box .select-custom {
+          height: 3.5rem; }
+          body .container-gral .champions-container .filters .filter-box .select-custom::before {
+            height: 3.5rem; }
+          body .container-gral .champions-container .filters .filter-box .select-custom::after {
+            height: 3.5rem; }
+          body .container-gral .champions-container .filters .filter-box .select-custom select {
+            height: 3.5rem; }
+    body .container-gral .champions-container .filtered-champions {
+      justify-content: space-between; }
+      body .container-gral .champions-container .filtered-champions .card {
+        height: 260px;
+        width: 45.5vw;
+        margin: 0 0 4.5vw 0; }
+        body .container-gral .champions-container .filtered-champions .card::before {
+          top: 80%;
+          left: -65%; }
+        body .container-gral .champions-container .filtered-champions .card .champion-data {
+          height: 45%; }
+    body .container-gral .objects-container {
+      width: 100%; }
+      body .container-gral .objects-container section {
+        width: 100%;
+        background: transparent;
+        padding-bottom: 1rem;
+        max-height: initial; }
+        body .container-gral .objects-container section .items-padre-container {
+          padding: 0;
+          justify-content: space-evenly;
+          margin-bottom: 0.5rem; }
+          body .container-gral .objects-container section .items-padre-container button {
+            margin: 0 3px 3px 0;
+            width: 16vw;
+            height: 16vw;
+            background-size: cover !important; }
+            body .container-gral .objects-container section .items-padre-container button .hover-item {
+              top: initial;
+              bottom: -120%;
+              z-index: 1;
+              width: 8rem;
+              height: 4rem;
+              display: none; }
+        body .container-gral .objects-container section .box-result {
+          padding: 0; }
+          body .container-gral .objects-container section .box-result .lista-fija,
+          body .container-gral .objects-container section .box-result .lista-dinamica {
+            margin-top: .5rem; }
+            body .container-gral .objects-container section .box-result .lista-fija > div,
+            body .container-gral .objects-container section .box-result .lista-dinamica > div {
+              margin-right: 5px;
+              margin: 0.96rem 0;
+              height: 31px;
+              width: 31px; }
+              body .container-gral .objects-container section .box-result .lista-fija > div::before,
+              body .container-gral .objects-container section .box-result .lista-dinamica > div::before {
+                content: none; }
+          body .container-gral .objects-container section .box-result .items-result-container {
+            margin-left: .5rem;
+            margin-top: .5rem; }
+            body .container-gral .objects-container section .box-result .items-result-container .result {
+              font-size: 0.7rem;
+              background-size: contain !important;
+              height: 54px;
+              padding-left: calc(54px + 0.7rem);
+              border-bottom: 1px dashed rgba(131, 142, 175, 0.4); } }
 
 /*# sourceMappingURL=style.css.map */
