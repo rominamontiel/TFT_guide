@@ -493,12 +493,11 @@ body {
     body .banner-container .content-top .left-box {
       width: 100%;
       justify-content: center;
-      align-items: baseline;
-      padding-top: 0.6rem; }
+      align-items: center; }
       body .banner-container .content-top .left-box .small-logo {
         display: none; }
       body .banner-container .content-top .left-box .tabs {
-        padding-left: 0;
+        padding: 0;
         margin: 0; }
         body .banner-container .content-top .left-box .tabs li span {
           font-size: .9rem; }
@@ -507,7 +506,8 @@ body {
           width: 120%;
           z-index: -1;
           left: 50%;
-          transform: translateX(-50%);
+          top: 50%;
+          transform: translate(-50%, -50%);
           background: rgba(31, 167, 197, 0.7);
           opacity: 0; }
         body .banner-container .content-top .left-box .tabs li img {
