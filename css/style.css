@@ -94,6 +94,8 @@ body {
       transition: all .3s ease-in-out; }
       body .banner-container .content-top-scroll .left-box .small-logo {
         height: 60%; }
+      body .banner-container .content-top-scroll .left-box .tabs {
+        padding-bottom: 1rem; }
     body .banner-container .banner-img {
       z-index: -1;
       width: 100%; }
