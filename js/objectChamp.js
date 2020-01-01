@@ -101,12 +101,6 @@ const campeon = [{
         costo: 4,
         img: 'lucian.jpg'
     }, {
-        name: 'lux',
-        elemento: ['Variable', ''],
-        clase: ['Avatar', ''],
-        costo: 7,
-        img: 'lux.jpg'
-    }, {
         name: 'malphite',
         elemento: ['Montaña', ''],
         clase: ['Tanque', ''],
@@ -322,6 +316,66 @@ const campeon = [{
         clase: ['Invocador', ''],
         costo: 1,
         img: 'zyra.jpg'
-    }
+    }, {
+        name: 'lux',
+        elemento: ['Luz', ''],
+        clase: ['Avatar', ''],
+        costo: 7,
+        img: 'lux_luz.jpg'
+    }, {
+        name: 'lux',
+        elemento: ['Acero', ''],
+        clase: ['Avatar', ''],
+        costo: 7,
+        img: 'lux_acero.jpg'
+    }, {
+        name: 'lux',
+        elemento: ['Bosque', ''],
+        clase: ['Avatar', ''],
+        costo: 7,
+        img: 'lux_bosque.jpg'
+    }, {
+        name: 'lux',
+        elemento: ['Cristal', ''],
+        clase: ['Avatar', ''],
+        costo: 7,
+        img: 'lux_cristal.jpg'
+    }, {
+        name: 'lux',
+        elemento: ['Eléctrico', ''],
+        clase: ['Avatar', ''],
+        costo: 7,
+        img: 'lux_electrico.jpg'
+    }, {
+        name: 'lux',
+        elemento: ['Gélido', ''],
+        clase: ['Avatar', ''],
+        costo: 7,
+        img: 'lux_gelido.jpg'
+    }, {
+        name: 'lux',
+        elemento: ['Infernal', ''],
+        clase: ['Avatar', ''],
+        costo: 7,
+        img: 'lux_infernal.jpg'
+    }, {
+        name: 'lux',
+        elemento: ['Nube', ''],
+        clase: ['Avatar', ''],
+        costo: 7,
+        img: 'lux_nube.jpg'
+    }, {
+        name: 'lux',
+        elemento: ['Océano', ''],
+        clase: ['Avatar', ''],
+        costo: 7,
+        img: 'lux_oceano.jpg'
+    }, {
+        name: 'lux',
+        elemento: ['Sombrío', ''],
+        clase: ['Avatar', ''],
+        costo: 7,
+        img: 'lux_sombrio.jpg'
+    },
 
 ];

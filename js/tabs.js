@@ -21,8 +21,6 @@ function activarTab2() {
     objetContainer.classList.add('hide');
     championsTab.classList.add('tab-active');
     objectsTab.classList.remove('tab-active');
-    eliminarHijos(container);
-    mostrarTodos();
 }
 
 
