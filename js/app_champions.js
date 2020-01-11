@@ -1,7 +1,8 @@
 var elemento, clase, costo;
 var container = document.getElementById('filtered-champions');
 
-window.onload = function () {
+window.onload = function () {    
+    campeon.sort((a, b) => (a.costo > b.costo) ? 1 : (a.costo === b.costo) ? ((a.name > b.name) ? 1 : -1) : -1);
     mostrarTodos();    
 };
 

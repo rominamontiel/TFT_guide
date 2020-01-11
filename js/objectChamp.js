@@ -1,23 +1,23 @@
-const campeon = [{
-        name: 'Aatrox',
+var campeon = [{
+        name: 'aatrox',
         elemento: ['Luz', ''],
         clase: ['Espadachín', ''],
         costo: 3,
         img: 'aatrox.jpg'
     }, {
-        name: 'Amumu',
+        name: 'amumu',
         elemento: ['Infernal', ''],
         clase: ['Tanque', ''],
         costo: 5,
         img: 'amumu.jpg'
     }, {
-        name: 'Annie',
+        name: 'annie',
         elemento: ['Infernal', ''],
         clase: ['Invocador', ''],
         costo: 4,
         img: 'annie.jpg'
     }, {
-        name: 'Ashe',
+        name: 'ashe',
         elemento: ['Cristal', ''],
         clase: ['Cazador', ''],
         costo: 4,
@@ -53,7 +53,7 @@ const campeon = [{
         costo: 3,
         img: 'ezreal.jpg'
     }, {
-        name: 'Ivern',
+        name: 'ivern',
         elemento: ['Bosque', ''],
         clase: ['Druida', ''],
         costo: 1,
@@ -95,13 +95,13 @@ const campeon = [{
         costo: 1,
         img: 'kogmaw.jpg'
     }, {
-        name: 'Leblanc',
+        name: 'leblanc',
         elemento: ['Bosque', ''],
         clase: ['Mago', 'Asesino'],
         costo: 2,
         img: 'leblanc.jpg'
     }, {
-        name: 'Leona',
+        name: 'leona',
         elemento: ['Lunar', ''],
         clase: ['Tanque', ''],
         costo: 1,
@@ -125,7 +125,7 @@ const campeon = [{
         costo: 1,
         img: 'maokai.jpg'
     }, {
-        name: 'Master Yi',
+        name: 'master yi',
         elemento: ['Sombrío', ''],
         clase: ['Espadachín', 'Místico'],
         costo: 5,
@@ -155,7 +155,7 @@ const campeon = [{
         costo: 1,
         img: 'nasus.jpg'
     }, {
-        name: 'Nautilus',
+        name: 'nautilus',
         elemento: ['Océano', ''],
         clase: ['Tanque', ''],
         costo: 3,
@@ -239,7 +239,7 @@ const campeon = [{
         costo: 3,
         img: 'soraka.jpg'
     }, {
-        name: 'Syndra',
+        name: 'syndra',
         elemento: ['Océano', ''],
         clase: ['Mago', ''],
         costo: 2,

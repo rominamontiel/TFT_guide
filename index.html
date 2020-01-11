@@ -34,28 +34,35 @@
     <div class="container-gral" id="container-gral">
         <div class="champions-container" id="champions-container">
             <div class="filters">
-                <div class="filter-box">
-                    <span>Elemento</span>
-                    <div class="select-custom">
-                        <select name="" id="filter-element" onchange="filtrar()">
-                        </select>
+                <div class="filter-selects">
+                    <div class="filter-box">
+                        <span>Elemento</span>
+                        <div class="select-custom">
+                            <select name="" id="filter-element" onchange="filtrar()">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-box">
+                        <span>Clase</span>
+                        <div class="select-custom">
+                            <select name="" id="filter-class" onchange="filtrar()">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-box">
+                        <span>Costo</span>
+                        <div class="select-custom">
+                            <select name="" id="filter-cost" onchange="filtrar()">
+                            </select>
+                        </div>
                     </div>
                 </div>
-                <div class="filter-box">
-                    <span>Clase</span>
-                    <div class="select-custom">
-                        <select name="" id="filter-class" onchange="filtrar()">
-                        </select>
-                    </div>
+                <div class="sort-buttons">
+                    <span class="txt">Ordenar</span>
+                    <button id="ordenar-costo"> <span>1 - 7</span> </button>
+                    <button id="ordenar-nombre"> <span>A - Z</span> </button>
                 </div>
-                <div class="filter-box">
-                    <span>Costo</span>
-                    <div class="select-custom">
-                        <select name="" id="filter-cost" onchange="filtrar()">
-                        </select>
-                    </div>
-                </div>
-            </div>
+            </div>            
             <div class="filtered-champions" id="filtered-champions">
                 <!-- <div class="card">
                     <div class="champion-data">
@@ -189,5 +196,6 @@
     <script src="js/app_champions.js"></script>
     <script src="js/objectChamp.js"></script>
     <script src="js/function_scroll.js"></script>
+    <script src="js/ordenar.js"></script>
 </body>
 </html>
