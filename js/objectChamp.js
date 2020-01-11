@@ -71,6 +71,12 @@ const campeon = [{
         costo: 2,
         img: 'jax.jpg'
     }, {
+        name: 'karma',
+        elemento: ['Lunar', ''],
+        clase: ['Místico', ''],
+        costo: 3,
+        img: 'karma.jpg'
+    }, {
         name: 'khazix',
         elemento: ['Desierto', ''],
         clase: ['Asesino', ''],
@@ -94,6 +100,12 @@ const campeon = [{
         clase: ['Mago', 'Asesino'],
         costo: 2,
         img: 'leblanc.jpg'
+    }, {
+        name: 'Leona',
+        elemento: ['Lunar', ''],
+        clase: ['Tanque', ''],
+        costo: 1,
+        img: 'leona.jpg'
     }, {
         name: 'lucian',
         elemento: ['Luz', ''],
